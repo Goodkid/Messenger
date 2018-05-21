@@ -22,7 +22,7 @@ s.send(data_b)
 
 status_b = s.recv(1024)
 
-print('Close\n' + '*' * 25)
+print('Close\n' + '*' * 26)
 s.close()
 
 print('Ответ сервера: %s' % status_b.decode('utf-8'))

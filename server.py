@@ -17,7 +17,7 @@ while True:
     if obj['action'] == 'authenticate':
         client.send(b'Ok')
     else:
-        client.send(b'error authentificate')
+        client.send(b'Authentication error')
     print('Close')
     print('*' * 150)
     client.close()
