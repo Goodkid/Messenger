@@ -15,9 +15,11 @@ while True:
     obj = json.loads(obj_j)
 
     if obj['action'] == 'authenticate':
-        client.send(b'Ok')
+        msg = 'RESPONSE: 200'
+        client.send(msg.encode('utf-8'))
     else:
-        client.send(b'Authentication error')
+        msg = 'RESPONSE: 400 ERROR: Неверный запрос'
+        client.send(msg.encode('utf-8'))
     print('Close')
     print('*' * 150)
     client.close()
