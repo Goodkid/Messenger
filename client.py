@@ -14,15 +14,10 @@ obj = {
     }
 }
 
-print('Send:', obj)
-
 data = json.dumps(obj)
 data_b = data.encode('utf-8')
 s.send(data_b)
-
 status_b = s.recv(1024)
-
-print('Close\n' + '*' * 25)
 s.close()
 
 print('Ответ сервера: %s' % status_b.decode('utf-8'))
